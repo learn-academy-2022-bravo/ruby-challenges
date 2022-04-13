@@ -4,8 +4,14 @@
 # Remember that floats are numbers with a decimal point whereas integers have no fractional part so in Ruby, 1 and 1.0 are different types of things with slightly different behaviors.
 
 # Add, subtract, multiply and divide some numbers and floats.
+
 # Find the remainder of dividing two numbers using the modulo operator (%).
+
+3.1.2 :001 > 10 % 3
+ => 1 
 # Divide a number by 0.
+3.1.2 :002 > 5 / 2
+ => 2 
 # Divide 0 by 0.
 # Variables Challenges
 
