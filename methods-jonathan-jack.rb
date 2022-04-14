@@ -44,7 +44,7 @@
     # Create conditional which prompts for new password if password does not contain !#$
 # User ID cannot contain the following characters: !#$ or spaces (done)
     # Same as previous but with if instead of unless
-# Password cannot be the word "password".
+# Password cannot be the word "password".(done)
 # User Stories: Stretch
 # As a user, I can enter my user ID and password into the terminal after being prompted to find out if the they are acceptable.
 # User Stories: Super Stretch
@@ -53,33 +53,44 @@
 p 'Please enter a username'
 user_id = gets.chomp
 p 'Please enter a password'
-password = gets.chomp
+first_password = gets.chomp
 
 def registration(userid, password)
-    if userid == password
-        p 'Username and password cannot be the same. Please enter a new password' and password = gets.chomp
-    end
-    
-    if password.length < 6
-        p 'Password must be more than six characters. Please enter new password' and password = gets.chomp
-    end
+    until userid != password and password.length > 6 and userid.length > 6 and (password.include?('!') or password.include?('#') or password.include?('$')) and password != 'password' and (!userid.include?('!') or !userid.include?('#') or !userid.include?('$') or !userid.include?(' '))
+        if userid == password
+            p 'Username and password cannot be the same. Please enter a new password' and password = gets.chomp
+        end
+        
+        if password.length < 6
+            p 'Password must be more than six characters. Please enter new password' and password = gets.chomp
+        end
 
-    if userid.length < 6
-        p 'Username must be more than six characters. Please enter new username' and userid = gets.chomp
-    end
+        if userid.length < 6
+            p 'Username must be more than six characters. Please enter new username' and userid = gets.chomp
+        end
 
-    unless password.include?('!' || '#' || '$')
-        p 'Password must include !, #, or $. Please enter new password.' and password = gets.chomp
-    end
+        unless password.include?('!') or password.include?('#') or password.include?('$')
+            p 'Password must include !, #, or $. Please enter new password.' and password = gets.chomp
+        end
 
-    if userid.include?('!' || '#' || '$' || ' ')
-        p 'Username cannot include !, #, or $. Please enter new username.' and userid = gets.chomp
-    end
+        if userid.include?('!') or userid.include?('#') or userid.include?('$') or userid.include?(' ')
+            p 'Username cannot include !, #, or $. Please enter new username.' and userid = gets.chomp
+        end
 
-    if password == 'password'
-        p 'That is not a valid password. Please enter new password' and password = gets.chomp
+        if password == 'password'
+            p 'That is not a valid password. Please enter new password' and password = gets.chomp
+        end
     end
-    registration(userid, password)
+    p 'Please enter your username'
+    user_id = gets.chomp
+    until user_id == userid
+        p "Invalid username. Please retry" and user_id = gets.chomp
+    end
+    p 'Please enter your password'
+    final_password = gets.chomp
+    until final_password == password
+        p "Invalid password. Please retry" and final_password = gets.chomp
+    end
 end
 
-registration(user_id, password)
+registration(user_id, first_password)
