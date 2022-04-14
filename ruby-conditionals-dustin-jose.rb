@@ -1,3 +1,6 @@
+##
+
+
 puts 'Player One - enter rock paper or scissors'
 
 p_one = gets.chomp
