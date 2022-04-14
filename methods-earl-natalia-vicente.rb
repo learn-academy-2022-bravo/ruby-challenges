@@ -45,17 +45,17 @@ p word('racecar')
 # User ID and password cannot be the same. (done)
 # User ID and password must be at least six characters long. (done)
 # Password must contain at least one of: !#$ (done)
-# User ID cannot contain the following characters: !#$ or spaces
-# Password cannot be the word "password".
+# User ID cannot contain the following characters: !#$ or spaces(done)
+# Password cannot be the word "password". (done)
 # User Stories: Stretch
-# As a user, I can enter my user ID and password into the terminal after being prompted to find out if the they are acceptable.
+# As a user, I can enter my user ID and password into the terminal after being prompted to find out if the they are acceptable. (done)
 # User Stories: Super Stretch
-# As a developer, my method ensures that the user's password must contain at least one number.
+# As a developer, my method ensures that the user's password must contain at least one number. (done)
 
-p "please enter userID"
+p "please enter userID to find out if it is acceptable"
 userID = gets.chomp
 p userID
-p "please enter password"
+p "please enter password to find out if it is acceptable"
 password = gets.chomp
 p password
 
@@ -66,17 +66,16 @@ def account (id, password)
     'id needs to be at least six characters long'
   elsif password.length < 6
     'password needs to be at least six characters long'
-  elsif password.include?('!') == false
+  elsif password == 'password'
+    'Password can not be password'
+  elsif password.include?('$') == false && password.include?('!') == false && password.include?('#') == false
     'please include one of these ! # $ in password'
-  elsif password.include?('#') == false
-    'please include one of these ! # $ in password'
-  elsif password.include?('$') == false
-    'please include one of these ! # $ in password'
-  elsif id.include?('!' '#' '$' ' ') == true
-    'User ID cannot contain the following characters: !#$ or spaces'
-
-
+  elsif password.include?('1') == false && password.include?('2') == false && password.include?('3') == false && password.include?('4') == false && password.include?('5') == false && password.include?('6') == false && password.include?('7') == false && password.include?('8') == false && password.include?('9') == false && password.include?('0') == false
+    'please include a number in your password'
+  elsif id.include?('$') == true || id.include?('!') == true || id.include?('#') == true || id.include?(' ') == true
+    'User ID cannot contain the following characters: !# $ or spaces'
+  else
+    'Your userID and password is acceptable'
   end
 end
-
 p account(userID, password)
