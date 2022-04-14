@@ -34,7 +34,7 @@ puts 'Enter a password: '
 user_password = gets.chomp
 
 def user_registration(user_id, password)
-    if user_id.include?('!') || user_id.include?('#') || user_id.include?('$') || user_id.include?(' ')
+    if user_id.include?('!') or user_id.include?('#') or user_id.include?('$') or user_id.include?(' ')
         'Username cannot incluse special characters "! # $"'
     elsif user_id == password
         'Username and password cannot be the same'
