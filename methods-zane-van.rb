@@ -13,28 +13,27 @@ p user_password
 # User ID and password must be at least six characters long.
 # Password must contain at least one of: !#$
 # User ID cannot contain the following characters: !#$ or spaces
+# Password cannot be the word "password".
 
 def user (id, password)
 
     if id == password
         "user ID #{id} and Password #{password} cannot be the same"
 
-    elsif password.length < 6 
-         "password cannot be less than 6 characters long" 
-    
-    elsif id.include?('!' || '#' || '$' || ' ')
+    elsif password.length < 6
+         "password cannot be less than 6 characters long"
+
+    elsif password == 'password'
+        "password cannot be password you goof"
+
+    elsif !id.include?('!' || '#' || '$' || ' ')
         "id cannot conatin !, #, $, ' '. Please enter new ID. "
         "#{id} is dope!id"
-    end
-    
-    unless password.include?('!' || '#' || '$' )
+    elsif !password.include?('!' || '#' || '$' )
         "password must contain at least one of: !, #, $."
-    else "#{password} is goooood!"
-
+          "#{password} is goooood!"
     end
+    user(user_id, user_password)
 end
 
 p user(user_id, user_password)
-
-
-# Password cannot be the word "password".
