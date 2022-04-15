@@ -1,68 +1,71 @@
-# Ruby Challenges
 
-This repository holds the Ruby pair programming challenges for the Bravo 2022 cohort.
+Challenges
+* Create a method called sum_these_numbers which takes two integers as an argument and prints their sum to the screen.
 
-### Process Notes
-- Anything wrapped in `< >` is an indication that this will be named uniquely, the `< >` are NOT actually added to the command
-- `$` is an indication of a command line prompt, the `$` is not included
-- Anything in `( )` is informational and not included in the command
-- The term local/locally means on your personal computer
-- The term remote means on GitHub
+ def sum_these_numbers (int1, int2)
+	int1 + int2
+end
 
+p sum_these_numbers(3, 42)
 
-### Naming Conventions
-Branches and file names should be in all lowercase letters:
-- Branch name: `topic-initials1-initials2` (ex. conditionals-aw-sp)
-- File name: `topic-student1-student2.js` (ex. conditionals-austin-sarah.rb)
+* Create a method called is_even, which takes a single integer, and which then returns true if the number is even, and false otherwise.
 
+ def is_even integer
+	if integer % 2 == 0
+		“true”
+	else
+		“false”
+	end
+end
 
-### Informational Commands
-Use this informational command to tell you what files have been modified and what phase of the git process you are on:  
-- $ `git status`  
+p is_even 3
+P is_even 4
 
-Use this informational command to see what branch you are currently on:  
-- $ `git branch`
-
-
-### Cloning a Repository
-Use this command if you don't have the repository (folder) on your local machine:   
-- $ `git clone <repo-url>` (pasted from clipboard on GitHub)
+* Create a method that takes a number as an argument and prints "Valid" if the number is between 1 and 10 (inclusive) and "Invalid" otherwise.
 
 
-### Updating an Existing Repository
-Use this command if you DO have the repository on your local machine but DON'T have the latest version of the code from GitHub:  
-- $ `git pull origin <branch-name>`
+ def valid_number integer
+	if integer >= 1 && integer <= 10
+		“Valid”
+	else
+		“Invalid”
+	end
+end
+
+p valid_number 34
+P valid_number 7
+
+* Create a method that takes in a string and determines if the string is a palindrome.
 
 
-### Create a Branch
-Use this command if you need to create a branch that does not exist anywhere:  
-- $ `git checkout -b <topic-initials1-initials2>` (ex. conditionals-aw-sp)
+ def palindrome string
+	nums = string.to_i
+	numsReverse = string.to_i.reverse
+
+		if nums == numsReverse
+			’This string ( #{} )is a palindrome.
+		else
+			’This string ( #{} ) is not a palindrome.
+		end
+end
+
+p palindrome 453927
+p palindrome 987789
 
 
-### Moving to an Existing Local Branch
-Use this informational command to see what branches exist on your local machine:  
-- $ `git branch`
+Challenge: Password Checker
 
-Use this command to move to a branch that exist on your local machine:  
-- $ `git checkout <branch-name>`  
+User Stories
+You are writing the user registration page for a secure web site. On the registration page, the user has to enter a user ID and a password, which has to adhere to the to following criteria:
+* As a developer, I can create a method that checks for the following rules for a user ID and password:
+    * User ID and password cannot be the same.
+    * User ID and password must be at least six characters long.
+    * Password must contain at least one of: !#$
+    * User ID cannot contain the following characters: !#$ or spaces
+    * Password cannot be the word "password".
 
+User Stories: Stretch
+* As a user, I can enter my user ID and password into the terminal after being prompted to find out if the they are acceptable.
 
-### Moving to an Existing GitHub Branch
-Use these commands if the repo you are working on has a branch but it is NOT on your local machine:  
-- $ `git fetch origin <branch-name>`
-- $ `git checkout <branch-name>`
-
-
-### Adding Local Code to GitHub
-Use these commands to add the code you have on your local machine to GitHub:
-- $ `pwd` (ensure you are in the repository level)
-- $ `git status` (informational command, ensure you are on the correct branch and in the correct directory)
-- $ `git add .`
-- $ `git commit -m "message describing the work that was accomplished"`
-- $ `git push origin <branch-name>`
-
-
-### Deleting a Branch
-Branches exist on your local and on the remote. Always delete your branch in both places.
-- Branches in GitHub can be deleted via the GUI
-- $ `git branch -d <branch-name>`
+User Stories: Super Stretch
+* As a developer, my method ensures that the user's password must contain at least one number.
