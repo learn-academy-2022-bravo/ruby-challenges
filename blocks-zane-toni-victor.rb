@@ -28,23 +28,43 @@
 
 # Create a method that takes in an array of numbers and returns a new array with all the numbers multiplied by 5.
 
-my_arr = [1, 3, 5, 7]
-my_arr1 = [2, 33, 45, 57]
-my_arr3 = [71, 83, 95, 07]
-my_arr4 = [0, 13, 53, 75]
+# my_arr = [1, 3, 5, 7]
+# my_arr1 = [2, 33, 45, 57]
+# my_arr3 = [71, 83, 95, 07]
+# my_arr4 = [0, 13, 53, 75]
 
-def mult_5 birds
-    birds.map do |toast|
-    toast * 5
-    end
-end
+# def mult_5 birds
+#     birds.map do |toast|
+#     toast * 5
+#     end
+# end
 
-p mult_5 my_arr
-p mult_5 my_arr1
-p mult_5 my_arr3
-p mult_5 my_arr4
+# p mult_5 my_arr
+# p mult_5 my_arr1
+# p mult_5 my_arr3
+# p mult_5 my_arr4
 
 # Create a method that takes in an array of lowercase words and capitalizes all of the words, permanently modifying the original array.
+
+my_word = ['robin', 'joker', 'riddler','penguin' ]
+
+def batman jet
+    jet.map {|cape| cape.capitalize!}
+    
+end
+p batman my_word
+
+
+
+
+
+
+
+
+
+
+
+
 # Create a method that takes in an array of numbers and returns the largest number in the array.
 # Create a method that takes in an array of numbers and returns the smallest number in the array.
 # Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
