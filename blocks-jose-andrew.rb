@@ -61,3 +61,24 @@
 # p largest_num arr
 
 # Create a method that takes in an array of numbers and returns the smallest number in the array.
+
+# arr = [1,3,4,5,6]
+# def min_num small
+#     small.min
+
+# end 
+# p min_num arr
+
+#Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
+
+arr = [1,69,34,5,7,8,9]
+def odds_sorted nums
+    nums.select do |value|
+        value.sort
+    end
+
+end 
+p odds_sorted arr
+
+# nums.select do |value|
+    #     value.even?
