@@ -17,12 +17,26 @@ my_phone[:chrome] = 'web browser'
 
 # As a developer, I can update two keys in my_phone.
 
-my_phone[:updated_settings] = my_phone.delete :settings
-my_phone[:updated_chrome] = my_phone.delete :chrome
+my_phone.delete(:updated_settings)
+my_phone.delete(:updated_chrome)
+
+p my_phone
 
 # As a developer, I can update two values in my_phone.
 
-
+my_phone[:music] = 'BigBodySam is the best artist in the whole wide world'
+my_phone[:photos] = 'My whole photo library is BigBodySam'
+p my_phone
 
 # As a developer, I can delete two key:value pairs from my_phone.
+
+my_phone.delete(:settings)
+my_phone.delete(:chrome)
+
+p my_phone
+
 # As a developer, I can use an enumerable method to return information about all of my_phone's applications.
+
+my_phone.each do |key, value|
+    puts "This app #{key} can #{value}"
+end
