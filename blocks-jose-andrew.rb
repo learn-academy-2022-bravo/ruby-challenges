@@ -40,17 +40,17 @@
 # def cap_words cap 
 #     cap.map(&:capitalize)
 # end
+# #
 
+
+# arr = ['jose', 'andrew']
+# def cap_words cap 
+#     cap.map do |value|
+#     value.capitalize
+#     end
+
+# end
 # p cap_words arr
-
-# # arr = ['jose', 'andrew']
-# # def cap_words cap 
-# #     cap.map(&:capitalize) do |value|
-# #     value
-# #     end
-
-# # end
-
 # Create a method that takes in an array of numbers and returns the largest number in the array.
 
 # arr = [1,3,4,5,6]
@@ -71,14 +71,11 @@
 
 #Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
 
-arr = [1,69,34,5,7,8,9]
-def odds_sorted nums
-    nums.select do |value|
-        value.sort
-    end
+# arr = [1,69,34,5,7,8,9]
+# def odds_sorted nums
+#     nums.sort_by(&:odds)
+# end 
+# p odds_sorted arr
 
-end 
-p odds_sorted arr
-
-# nums.select do |value|
-    #     value.even?
+# # nums.select do |value|
+#     #     value.even?
