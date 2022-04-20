@@ -26,17 +26,17 @@ p fav_food.capitalize
 
 p fav_food
 
- p shows = ['The Office', 'Seinfeld', 'Better Call Saul', 'Breaking Bad', 'Ozark'  ]
+p shows = ['The Office', 'Seinfeld', 'Better Call Saul', 'Breaking Bad', 'Ozark'  ]
 
- p shows.length
- p shows.first
+p shows.length
+p shows.first
 
- p shows[3]
+p shows[3]
 
- p shows = shows.reverse
+p shows = shows.reverse
 
- p new_shows = []
+p new_shows = []
 
- new_shows << shows[2] << shows[3]
+new_shows << shows[2] << shows[3]
 
- p new_shows
+p new_shows
