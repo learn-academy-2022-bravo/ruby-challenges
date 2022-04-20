@@ -19,19 +19,32 @@ end
 
 # As a developer, I can create three instances (objects) of class Task. (e.g laundry = Task.new)
 
-p laundry = Task.new 
-p mop = Task.new
-p cook = Task.new
 
 
 # # As a developer, I can initialize each instance of class Task with a title.
 
 
+
+
 # # As a developer, I can see the title of each instance of class Task.
+
+
+
 
 # # As a developer, I can initialize each instance of class Task with a status that has a default value of 'incomplete'.
 
 # # As a developer, I can update the status of each instance of class Task when the task has been completed.
+
+laundry =Task.new('finished')
+laundry.task_done 
+p laundry
+mop = Task.new('finished')
+mop.task_done
+p mop
+cook =Task.new('finished')
+cook.task_done
+p cook
+
 
 # # For the following ColorPalette challenge use initialize and attr_accessor methods in your class
 # # As a developer, I can create a class called ColorPalette.
