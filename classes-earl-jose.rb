@@ -33,18 +33,6 @@
 # As a developer, I can print the value of each individual color.
 # As a developer, I can create a method called all_colors that when called will print a sentence telling me the three colors of a given palette.
 # As a developer, I can change one or more colors of a given palette.
-class Vehicle
-  def initialize(year, make, model)
-    @year = year
-    @make = make
-    @model = model
-  end
-
-  def show_vehicle_info
-    "This is a #{@year} #{@make} #{@model}."
-  end
-end
-
 
 class ColorPalette
   attr_accessor :color1_param, :color2_param, :color3_param
