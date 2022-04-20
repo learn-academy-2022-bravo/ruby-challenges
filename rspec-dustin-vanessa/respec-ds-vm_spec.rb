@@ -4,7 +4,9 @@
 
 # DONE Story: As a developer, I can give a Task a description and retrieve it.
 
-# DONE Story: As a developer, I can mark a Task done. Tasks should be initialized as 'in progress'.
+# DONE Story: As a developer, I can mark a Task done. Tasks should be initialized as 'in progress'. 
+
+# DONE Story: As a developer, when I print a Task that is done, its status is shown.
 
 require 'rspec'
 require_relative 'rspec-ds-vm.rb'
@@ -35,16 +37,19 @@ describe 'Task' do
         expect(my_task.isDone).to be_a String
         expect(my_task.isDone).to eq 'done'
     end
+    
+    it 'can add all tasks to a Task List' do
+        my_task = Task.new
+        my_task.list = []
+        expect(my_task.list).to be_a Array
+        expect(my_task.list).to eq []
+
+    end
 end
 
 
+   
 
-
-
-
-
-
-# Story: As a developer, when I print a Task that is done, its status is shown.
 
 
 
