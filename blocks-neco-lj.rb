@@ -60,9 +60,21 @@ num = 20
 while num >=0
     if num % 2 == 0
     p num
-    num -= 1
     end
+    num -= 1
 end
+
+output: 20
+18
+16
+14
+12
+10
+8
+6
+4
+2
+0
 
 
 # Create a method that takes in an array of numbers and returns a new array with all the numbers multiplied by 5.
