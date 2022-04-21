@@ -66,3 +66,4 @@ Use these commands to add the code you have on your local machine to GitHub:
 Branches exist on your local and on the remote. Always delete your branch in both places.
 - Branches in GitHub can be deleted via the GUI
 - $ `git branch -d <branch-name>`
+
