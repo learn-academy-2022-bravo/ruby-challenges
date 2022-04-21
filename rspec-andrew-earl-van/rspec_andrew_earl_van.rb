@@ -5,4 +5,10 @@ attr_accessor :title, :description, :progression
     @description = description
     @progression = progression
   end
+
+  def task_done status
+     @progression = status
+
+  end
+
 end

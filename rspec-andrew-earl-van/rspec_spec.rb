@@ -44,4 +44,10 @@ describe 'Task' do
     expect(my_task.progression).to eq 'in progess'
   end
 
+  it 'change to done' do
+  my_task = Task.new
+  expect{ my_task.task_done 'done' }.to change{ my_task.progression }.from('in progress').to('done')
+  end
+
+
 end
