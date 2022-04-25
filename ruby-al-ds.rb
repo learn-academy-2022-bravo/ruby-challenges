@@ -49,6 +49,7 @@
  => "andrew is tired" 
 # Create a variable that contains a string and test some of the Ruby string methods
 
+
 # .upcase
 # .reverse
 # .include?
